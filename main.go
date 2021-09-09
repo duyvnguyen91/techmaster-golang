@@ -2,14 +2,12 @@ package main
 
 import (
 	"fmt"
-	"techmaster-golang/01/homework"
 )
 
 func main()  {
-	//fmt.Println(homework.IsTriangle())
-	//fmt.Println(homework.EquationQuadratic())
-	//homework.GuessNumber()
-	fmt.Println(homework.GeneratePrimeNumber())
+	fmt.Println("Hello World!")
+	//fmt.Println(homework.RemoveDuplicates([]int{1,2,5,2,6,2,5}))
 }
+
 
 
