@@ -39,12 +39,7 @@ func (c *Calendar) PrintCalendar() string {
 	//s += "|" + strings.Repeat("----:|", wc) + "\n"
 	s += "" + strings.Repeat("     ", wd)
 	for d := 1; d <= last; d++ {
-		//url := c.link(d)
-		//if url != "" {
-		//	s += " [" + fmt.Sprint(d) + "](" + url + ") |"
-		//} else {
 		s += fmt.Sprintf("  %2d ", d)
-		//}
 		wd = (wd + 1) % wc
 		if wd == 0 {
 			s += "\n"
@@ -61,13 +56,6 @@ func (c *Calendar) PrintCalendar() string {
 func (c *Calendar) String() string {
 	return c.PrintCalendar()
 }
-
-//func (c Calendar) link(d int) string {
-//	if c.LinkFunc == nil {
-//		return ""
-//	}
-//	return c.LinkFunc(c.Date.AddDate(0, 0, -c.Date.Day()+d))
-//}
 
 func main()  {
 	fmt.Println(NewCalendar().PrintCalendar())

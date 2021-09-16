@@ -3,12 +3,11 @@ package main
 import (
 	"context"
 	"fmt"
+	"github.com/docker/docker/api/types"
+	"github.com/docker/docker/client"
 	term "github.com/nsf/termbox-go"
 	"log"
 	"os"
-
-	"github.com/docker/docker/api/types"
-	"github.com/docker/docker/client"
 )
 
 func main() {
@@ -30,8 +29,7 @@ func main() {
 		log.Fatalln(err)
 	}
 
-	fmt.Println("Enter any key to see their ASCII code or press ESC button to quit")
-	fmt.Println("Press any key to see their ASCII code follow by Enter")
+	fmt.Println("Enter F5 to toggle between options, press ESC or CTRL+C button to quit")
 
 	for i := 1; i <= 3; i++ {
 		ev := term.PollEvent()
