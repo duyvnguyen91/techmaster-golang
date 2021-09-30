@@ -4,14 +4,15 @@ import (
 	"context"
 	"flag"
 	"fmt"
-	"github.com/docker/docker/api/types"
-	"github.com/docker/docker/client"
 	"log"
 	"os"
 	"strings"
+
+	"github.com/docker/docker/api/types"
+	"github.com/docker/docker/client"
 )
 
-func main() {
+func test() {
 	ctx := context.Background()
 	cli, err := client.NewClientWithOpts(client.FromEnv, client.WithAPIVersionNegotiation())
 	if err != nil {
@@ -36,8 +37,8 @@ func main() {
 		os.Exit(1)
 	}
 
-	startId := strings.Join(start.Args(),"")
-	stopID := strings.Join(stop.Args(),"")
+	startId := strings.Join(start.Args(), "")
+	stopID := strings.Join(stop.Args(), "")
 
 	if stop.Parsed() {
 		// Required Flags
