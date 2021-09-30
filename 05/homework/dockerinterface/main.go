@@ -1,8 +1,8 @@
 package main
 
 import (
-	"dockerinterface/dockerinterface/container"
 	"log"
+	"techmaster-golang/05/homework/dockerinterface/container"
 )
 
 func main() {
